@@ -12,7 +12,7 @@ const ExpertHelp = () => {
           <span className="text-primary">Dubai</span>
         </h2>
         <div className="grid grid-cols-12 gap-8">
-          <div className="col-span-4 border flex flex-col justify-center items-center rounded-xl bg-white p-10">
+          <div className="col-span-12 lg:col-span-4 border flex flex-col justify-center items-center rounded-xl bg-white p-10">
             <form className="w-full flex flex-col gap-5">
               <input className="border-b text-xl pb-2 placeholder:font-light" placeholder="Full name *" />
               <input className="border-b text-xl pb-2 placeholder:font-light" placeholder="Telephone number *" />
@@ -20,7 +20,7 @@ const ExpertHelp = () => {
             </form>
             <img src={MPDLogo} alt="logo" className="w-8/12 mt-8" />
           </div>
-          <div className="col-span-8 rounded-xl grid grid-cols-2 bg-white border">
+          <div className="col-span-12 lg:col-span-8 rounded-xl grid grid-cols-2 bg-white border">
             <div className="h-full w-auto pl-16">
               <img src={YuliaImg} alt="Yulia" />
             </div>

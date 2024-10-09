@@ -1,10 +1,12 @@
 import React from "react";
 
+import ExpertHelp from "../components/ExpertHelp";
 
 const Landing = () => {
   return (
-    <div className="">
-      <div className="">this is landing page</div>
+    <div>
+    
+      <ExpertHelp />
     </div>
   );
 };

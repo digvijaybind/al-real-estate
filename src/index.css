@@ -5,44 +5,60 @@
 
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
 
 /* Regular */
 @font-face {
-  font-family: "Open Sans";
-  src: url("./assets/fonts/open-sans/OpenSans-Regular.ttf") format("truetype");
+  font-family: 'Open Sans';
+  src: url('./assets/fonts/open-sans/OpenSans-Regular.ttf') format('truetype');
   font-weight: 400;
   font-style: normal;
 }
 
 /* Semi-Bold */
 @font-face {
-  font-family: "Open Sans";
-  src: url("./assets/fonts/open-sans/OpenSans-Semibold.ttf") format("truetype");
+  font-family: 'Open Sans';
+  src: url('./assets/fonts/open-sans/OpenSans-Semibold.ttf') format('truetype');
   font-weight: 600;
   font-style: normal;
 }
 
 /* Bold */
 @font-face {
-  font-family: "Open Sans";
-  src: url("./assets/fonts/open-sans/OpenSans-Bold.ttf") format("truetype");
+  font-family: 'Open Sans';
+  src: url('./assets/fonts/open-sans/OpenSans-Bold.ttf') format('truetype');
   font-weight: 700;
   font-style: normal;
 }
 @font-face {
-  font-family: "Open Sans";
-  src: url("./assets/fonts/open-sans/OpenSans-Light.ttf") format("truetype");
+  font-family: 'Open Sans';
+  src: url('./assets/fonts/open-sans/OpenSans-Light.ttf') format('truetype');
   font-weight: 300;
   font-style: light;
+}
+
+input[data-focus='true'] {
+  @apply text-white;
+
+  & + label {
+    @apply absolute w-max top-0 text-base -translate-y-5 left-0 font-light text-white transition-all;
+  }
+
+  &:placeholder-shown + label {
+    @apply top-1/2 -translate-y-1/2 text-lg;
+  }
+
+  &:focus + label {
+    @apply top-0 text-base -translate-y-5;
+  }
 }

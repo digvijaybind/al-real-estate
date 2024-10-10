@@ -1,10 +1,7 @@
 import axios from "axios";
 import qs from "qs";
 
-// Use a CORS proxy
-const proxyUrl = "https://cors-anywhere.herokuapp.com/";
-const LEAD_CAPTURE_URL =
-  "https://webto.salesforce.com/servlet/servlet.WebToLead";
+const CORS_PROXY_URL = "https://webto.salesforce.com/servlet/servlet.WebToLead";
 
 export const submitLead = async (formData) => {
   try {
@@ -15,14 +12,12 @@ export const submitLead = async (formData) => {
     const data = qs.stringify(formData);
 
     // Send request through the CORS proxy
-    const response = await axios.post(proxyUrl + LEAD_CAPTURE_URL, data, {
-      headers,
-    });
+    const response = await axios.post(CORS_PROXY_URL, data, {headers});
 
     console.log("Salesforce Response:", response.data);
 
     if (response.status === 200) {
-      return true; // Handle successful submission
+      return true;
     } else {
       throw new Error(`Error submitting lead: ${response.status}`);
     }

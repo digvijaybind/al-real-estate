@@ -6,6 +6,10 @@ import Faq from "../components/faq/Faq";
 import Township from "../assets/images/landing/beachesArea.jpg";
 import Villas from "../components/villas/Villas";
 import OffPlan from "../components/offPlan/OffPlan";
+import { AboutUs } from "../components/about/About";
+import Quiz from "../components/quiz/Quiz";
+import FloorPlan from "../components/floorPlan/FloorPlan";
+import Notification from "../components/notification/Notification";
 
 const Landing = () => {
   return (
@@ -26,6 +30,11 @@ const Landing = () => {
       {/* faq */}
       <Faq />
       <ExpertHelp />
+      {/* <Header /> */ }
+      <AboutUs />
+      <Quiz />
+      <FloorPlan />
+      <Notification />
     </div>
   );
 };

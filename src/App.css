@@ -28,6 +28,11 @@
   color: #61dafb;
 }
 
+.hero-bg{
+  background: url("./assets/images/pattern1.png");
+  background-position-x: -750px;
+}
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);

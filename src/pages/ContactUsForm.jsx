@@ -1,5 +1,5 @@
 import React, {useState} from "react";
-import {submitEnquiry} from "../services/api"; 
+import {submitLead} from "../services/api"; 
 
 const ContactUsForm = () => {
   const [formData, setFormData] = useState({
@@ -37,7 +37,7 @@ const ContactUsForm = () => {
 
     try {
       // Send form data to API
-      await submitEnquiry(formData);
+      await submitLead(formData);
       setSuccess("Your enquiry has been submitted successfully!");
     } catch (err) {
       setError("Failed to submit the enquiry. Please try again.");

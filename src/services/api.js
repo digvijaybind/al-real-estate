@@ -1,36 +1,33 @@
 import axios from "axios";
+import qs from "qs";
 
-// Define the proxy URL and target API URL
+// Use a CORS proxy
 const proxyUrl = "https://cors-anywhere.herokuapp.com/";
-const targetUrl = "https://webto.salesforce.com/servlet/servlet.WebToLead";
+const LEAD_CAPTURE_URL =
+  "https://webto.salesforce.com/servlet/servlet.WebToLead";
 
-// Function to submit the enquiry form data
-export const submitEnquiry = async (formData) => {
+export const submitLead = async (formData) => {
   try {
-    // Define the headers to include in the request
     const headers = {
-      "Content-Type": "application/json",
-      // Add other headers if needed, such as authorization
+      "Content-Type": "application/x-www-form-urlencoded",
     };
 
-    // Make the POST request through the CORS proxy
-    const response = await axios.post(
-      "https://cors-anywhere.herokuapp.com/https://webto.salesforce.com/servlet/servlet.WebToLead",
-      formData,
-      {
-        headers,
-      }
-    );
+    const data = qs.stringify(formData);
 
-    console.log("Response:", response.data); // Log the response data to the console
-    return response.data; // Return the response data
+    // Send request through the CORS proxy
+    const response = await axios.post(proxyUrl + LEAD_CAPTURE_URL, data, {
+      headers,
+    });
+
+    console.log("Salesforce Response:", response.data);
+
+    if (response.status === 200) {
+      return true; // Handle successful submission
+    } else {
+      throw new Error(`Error submitting lead: ${response.status}`);
+    }
   } catch (error) {
-    // Enhanced error handling to capture response data and status
-    const errorMessage = error.response
-      ? `Error: ${error.response.status} - ${error.response.data}`
-      : `Error: ${error.message}`;
-
-    console.error("Error submitting enquiry:", errorMessage);
-    throw new Error("Failed to submit enquiry. " + errorMessage);
+    console.error("Error submitting lead:", error.message);
+    throw new Error("Failed to submit lead. Please try again later.");
   }
 };

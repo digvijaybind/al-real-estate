@@ -42,7 +42,7 @@ function Villas() {
               <img
                 src={image.src}
                 alt={`Thumbnail ${index + 1}`}
-                className={`cursor-pointer w-full border rounded-md transition-all duration-300 ${
+                className={`cursor-pointer w-full h-2/3 border rounded-md transition-all duration-300 ${
                   highlightedImage && highlightedImage.src === image.src
                     ? "border-blue-500"
                     : "border-gray-300"

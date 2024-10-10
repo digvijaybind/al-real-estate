@@ -5,10 +5,12 @@ import TopHero from "../components/TopHero";
 import Faq from "../components/faq/Faq";
 import Township from "../assets/images/landing/beachesArea.jpg";
 import Villas from "../components/villas/Villas";
+import OffPlan from "../components/offPlan/OffPlan";
 
 const Landing = () => {
   return (
     <div>
+      {/*top hero section */}
       <TopHero />
       {/*this is township project */}
       <div>
@@ -17,6 +19,11 @@ const Landing = () => {
 
       {/*slider images  of villas*/}
       <Villas />
+
+      {/*New off plan component */}
+
+      <OffPlan />
+      {/* faq */}
       <Faq />
       <ExpertHelp />
     </div>

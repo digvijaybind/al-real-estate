@@ -1,18 +1,9 @@
 import React from "react";
 import Slider from "react-slick";
-import "slick-carousel/style.css";
-import "slick-carousel/slick-theme.css";
-import Township from "../../assets/images/landing/villas/Township.jpg"
-import BeachArea from "../../assets/images/landing/villas/beachesArea.jpg";
-import Villas from "../../assets/images/landing/villas/villas.jpg";
-function TopImageCarousel({onImageClick}) {
-  const images = [
-    {src: Township},
-    {src: BeachArea},
-    {src: Villas},
-    // ... add more images
-  ];
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
+function TopImageCarousel({images, sliderRef, highlightedImage, onImageClick}) {
   const sliderSettings = {
     dots: true,
     infinite: true,
@@ -22,11 +13,15 @@ function TopImageCarousel({onImageClick}) {
     arrows: true,
     autoplay: true,
     autoplaySpeed: 3000,
+    // Set the initial slide to match the highlighted image index
+    initialSlide: images.findIndex(
+      (image) => image.src === highlightedImage?.src
+    ),
   };
 
   return (
     <div className="top-image-carousel">
-      <Slider {...sliderSettings}>
+      <Slider ref={sliderRef} {...sliderSettings}>
         {images.map((image, index) => (
           <div key={index} onClick={() => onImageClick(image)}>
             <img

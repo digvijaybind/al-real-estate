@@ -1,4 +1,4 @@
-import DamacLogo from "../assets/images/group (1).svg";
+import DamacLogo from "../assets/images/group1.svg";
 import WalletIcon from "../assets/images/icn1_1.svg";
 import PriceIcon from "../assets/images/icn1_2.svg";
 import KeyIcon from "../assets/images/icn1_3.svg";
@@ -10,7 +10,9 @@ const TopHero = () => {
       <p className="px-5 md:px-14 py-5 flex gap-4 text-xm md:text-base flex-wrap font-light mb-8">
         <span className="text-primary whitespace-nowrap">Main Page</span> ›{" "}
         <span className="text-primary whitespace-nowrap">Projects</span> ›
-        <span className="whitespace-nowrap">Riverside from DAMAC Properties</span>
+        <span className="whitespace-nowrap">
+          Riverside from DAMAC Properties
+        </span>
       </p>
       <div className="pl-8 w-full md:pl-40 grid grid-cols-2 pb-16 hero-bg bg-auto bg-no-repeat">
         <div className="col-span-2 md:col-span-1 pb-10">

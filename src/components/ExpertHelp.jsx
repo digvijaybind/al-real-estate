@@ -6,8 +6,8 @@ import { TiLocation } from "react-icons/ti";
 const ExpertHelp = () => {
   return (
     <div className="w-full">
-      <div className="bg-gradient-to-r from-[#EFF2F7] to-white rounded-3xl border border-[#EFF2F7] px-48 py-20">
-        <h2 className="w-full text-start text-4xl mb-14 font-medium">
+      <div className="bg-gradient-to-r from-[#EFF2F7] to-white rounded-[40px] md:rounded-[80px] border border-[#EFF2F7] px-8 md:px-48 py-20">
+        <h2 className="w-full text-start text-2xl md:text-4xl mb-14 font-medium">
           Our Expert Will Help You<br /> Buy The Best Property in{" "}
           <span className="text-primary">Dubai</span>
         </h2>
@@ -21,10 +21,10 @@ const ExpertHelp = () => {
             <img src={MPDLogo} alt="logo" className="w-8/12 mt-8" />
           </div>
           <div className="col-span-12 lg:col-span-8 rounded-xl grid grid-cols-2 bg-white border">
-            <div className="h-full w-auto pl-16">
+            <div className="col-span-2 md:col-span-1 h-full w-auto pl-16">
               <img src={YuliaImg} alt="Yulia" />
             </div>
-            <div className="flex flex-col items-start p-8">
+            <div className="flex flex-col items-start p-8 col-span-2 md:col-span-1">
               <h4 className="text-[1.35rem] font-medium">Yulia Berezhnaya</h4>
               <p className="border-b w-full pb-8 mb-8 text-start font-light">
                 Senior Sales Advisor

@@ -1,0 +1,26 @@
+[
+  {
+    "img": "/images/header/submenu/area/Allarea.png",
+    "title": "All Areas"
+  },
+  {
+    "img": "/images/header/submenu/area/downtow.png",
+    "title": "Downtown Dubai"
+  },
+  {
+    "img": "/images/header/submenu/area/dubaiCreek.png",
+    "title": "Dubai Creek"
+  },
+  {
+    "img": "/images/header/submenu/area/emaar.png",
+    "title": "Emaar Beachfront"
+  },
+  {
+    "img": "/images/header/submenu/area/Palm.png",
+    "title": "Palm Jumeriah"
+  },
+  {
+    "img": "/images/header/submenu/area/Dubaimarina.png",
+    "title": "Dubai Marina"
+  }
+]

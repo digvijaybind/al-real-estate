@@ -2,15 +2,23 @@ import {useState} from "react";
 import Companylogo from "../../assets/images/header/headrimage.svg";
 import countryflag from "../../assets/images/header/countryflag.svg";
 import {IoCallOutline} from "react-icons/io5";
+import Area from "../../data/submenu/area.json";
+import Properties from "../../data/submenu/properties.json";
+import Developers from "../../data/submenu/developers.json";
+import NewProperties from "../../data/submenu/newProprty.json";
+import {useNavigate} from "react-router-dom";
 const Header = () => {
   const [openDropdown, setOpenDropdown] = useState(null);
-
+   const navigate = useNavigate();
   const handleMouseEnter = (dropdown) => {
     setOpenDropdown(dropdown);
   };
 
   const handleMouseLeave = () => {
     setOpenDropdown(null);
+  };
+  const handleClick = () => {
+    navigate("/contact"); 
   };
 
   return (
@@ -32,7 +40,7 @@ const Header = () => {
               </button>
               {openDropdown === "properties" && (
                 <>
-                  <div className="absolute left-0 mt-2 w-40 bg-white border border-gray-200 rounded-md shadow-lg z-10">
+                  {/* <div className="absolute left-0 mt-2 w-40 bg-white border border-gray-200 rounded-md shadow-lg z-10">
                     <a
                       href="#"
                       className="block px-4 py-2 text-gray-700 hover:bg-blue-100"
@@ -57,10 +65,71 @@ const Header = () => {
                     >
                       Open Houses
                     </a>
-                  </div>
+                  </div> */}
 
-                  <div className="">
-                    
+                  <div className="grid grid-rows-3 bg-[#fff]">
+                    {/* All Properties */}
+                    <div className="grid grid-cols-5 gap-5">
+                      {Properties?.Allproperties?.map((data, index) => (
+                        <div className="flex flex-col items-center" key={index}>
+                          <img
+                            src={data.img}
+                            alt={data.title}
+                            className="h-[200px] w-[120px] object-cover"
+                            onError={(e) =>
+                              (e.target.src = "/fallback-image.jpg")
+                            } // Add fallback image
+                          />
+                          <div className="text-[16px] font-open-sans text-[#1E1E1E] font-bold">
+                            {data.title}
+                          </div>
+                        </div>
+                      ))}
+                    </div>
+
+                    {/* Divider */}
+                    <div className="w-full h-[1px] bg-[#E2E2E2] rounded-none my-4"></div>
+
+                    {/* Amenities */}
+                    <div className="grid grid-cols-5 grid-rows-2 gap-5">
+                      {Properties?.Aminities?.map((data, index) => (
+                        <div className="flex flex-row items-center" key={index}>
+                          <img
+                            src={data.img}
+                            alt={data.title}
+                            className="h-[60px] w-[100px] object-cover"
+                            onError={(e) =>
+                              (e.target.src = "/fallback-image.jpg")
+                            } // Add fallback image
+                          />
+                          <div className="font-open-sans font-bold text-[#1E1E1E] text-[20px]">
+                            {data.title}
+                          </div>
+                        </div>
+                      ))}
+                    </div>
+
+                    {/* Divider */}
+                    <div className="w-full h-[1px] bg-[#E2E2E2] rounded-none my-4"></div>
+
+                    {/* Alerts */}
+                    <div className="grid grid-cols-3 gap-5">
+                      {Properties?.Alert?.map((data, index) => (
+                        <div className="flex flex-row items-center" key={index}>
+                          <img
+                            src={data.img}
+                            alt={data.title}
+                            className="h-[60px] w-[100px] object-cover"
+                            onError={(e) =>
+                              (e.target.src = "/fallback-image.jpg")
+                            } // Add fallback image
+                          />
+                          <div className="font-open-sans font-bold text-[16px] text-[#1E1E1E]">
+                            {data.title}
+                          </div>
+                        </div>
+                      ))}
+                    </div>
                   </div>
                 </>
               )}
@@ -197,7 +266,10 @@ const Header = () => {
 
         {/* Right-side buttons and language selector */}
         <div className="flex items-center space-x-4">
-          <button className="bg-[#01aee6] text-white px-4 py-3 rounded-lg hover:bg-[#8C1819] transition duration-200 ease-in-out flex flex-row justify-between  font-open-sans font-extrabold">
+          <button
+            className="bg-[#01aee6] text-white px-4 py-3 rounded-lg hover:bg-[#8C1819] transition duration-200 ease-in-out flex flex-row justify-between  font-open-sans font-extrabold"
+           onClick={handleClick}
+          >
             <IoCallOutline className="text-[#fff] text-2xl mr-2" />
             Call Us
           </button>

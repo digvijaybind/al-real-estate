@@ -1,0 +1,80 @@
+{
+  "Allproperties": [
+    {
+      "img": "/images/header/submenu/property/allpropertnew.png",
+      "title": "All Properties in Dubai"
+    },
+    {
+      "img": "/images/header/submenu/property/apartments.png",
+      "title": "Apartments"
+    },
+    {
+      "img": "/images/header/submenu/property/penthouse.png",
+      "title": "Penthouse"
+    },
+    {
+      "img": "/images/header/submenu/property/Townhouse.png",
+      "title": "Townhouses"
+    },
+    {
+      "img": "/images/header/submenu/property/villas.png",
+      "title": "Villas"
+    }
+  ],
+  "Aminities": [
+    {
+      "img": "/images/header/submenu/property/umbrella.png",
+      "title": "Beachfront Properties"
+    },
+    {
+      "img": "/images/header/submenu/property/waterdrop.png",
+      "title": "Waterfront Properties"
+    },
+    {
+      "img": "/images/header/submenu/property/diamond.png",
+      "title": "Dubai Luxury Living "
+    },
+    {
+      "img": "/images/header/submenu/property/heart.png",
+      "title": "Green Nature Living "
+    },
+    {
+      "img": "/images/header/submenu/property/flag.png",
+      "title": "Near Golf Course "
+    },
+    {
+      "img": "/images/header/submenu/property/downside.png",
+      "title": "Properties Below AED 1,000,000"
+    },
+    {
+      "img": "/images/header/submenu/property/upside.png",
+      "title": "Properties Above AED 1,000,000"
+    },
+    {
+      "img": "/images/header/submenu/property/house.png",
+      "title": "Land Plots"
+    },
+    {
+      "img": "/images/header/submenu/property/building.png",
+      "title": "Buildings"
+    },
+    {
+      "img": "/images/header/submenu/property/star.png",
+      "title": "Branded Residences"
+    }
+  ],
+  "Alert": [
+    {
+      "img": "/images/header/submenu/property/bellicon.svg",
+      "title": "Get Notifications About New Off-Plan Launches"
+    },
+    {
+      "img": "/images/header/submenu/property/fire.png",
+      "title": "The Latest Off-Plan Projects"
+    },
+    {
+      "img": "/images/header/submenu/property/alarm.png",
+      "title": "Take A Quick Test & Get The Best Offers"
+    }
+  ]
+}

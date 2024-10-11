@@ -1,18 +1,21 @@
 import axios from "axios";
 import qs from "qs";
 
-const CORS_PROXY_URL = "https://webto.salesforce.com/servlet/servlet.WebToLead";
+const LEAD_CAPTURE_URL =
+  "https://webto.salesforce.com/servlet/servlet.WebToLead";
 
 export const submitLead = async (formData) => {
   try {
     const headers = {
       "Content-Type": "application/x-www-form-urlencoded",
+      "Access-Control-Allow-Origin": "*",
+      "Access-Control-Allow-Methods": "POST, OPTIONS",
+      "Access-Control-Allow-Headers": "Content-Type, Authorization",
     };
 
     const data = qs.stringify(formData);
 
-    // Send request through the CORS proxy
-    const response = await axios.post(CORS_PROXY_URL, data, {headers});
+    const response = await axios.post(LEAD_CAPTURE_URL, data, {headers});
 
     console.log("Salesforce Response:", response.data);
 

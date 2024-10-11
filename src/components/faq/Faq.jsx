@@ -52,7 +52,7 @@ const FAQSection = ({title, description}) => {
 // Main Faq Component
 const Faq = () => {
   return (
-    <div className="flex flex-col justify-start items-center px-10 py-16 lg:px-20 lg:py-20 md:px-14 md:py-14 sm:px-5 sm:py-5">
+    <div className="flex flex-col justify-start items-center  mx-auto md:w-[85%] w-[90%] ">
       {/* FAQ Section Title */}
       <div className="flex justify-start w-full flex-col sm:justify-center">
         {/* Title Font Size Responsive */}

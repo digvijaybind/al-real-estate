@@ -1,0 +1,92 @@
+[
+  {
+    "img": "",
+    "planProgress": "50/50 PAYMENT PLAN",
+    "apartmentType": "APARTMENT",
+    "price": 20000000,
+    "location": "The Alba",
+    "landmark": "Palm Jumeirah",
+    "developer": "OMNIYAT",
+    "handover": "Ask Manager"
+  },
+  {
+    "img": "",
+    "planProgress": "80/20 PAYMENT PLAN",
+    "apartmentType": "VILLAS",
+    "price": 29000000,
+    "location": "The Coral Collection on Palm Jebel Ali",
+    "landmark": "Palm Jumeirah",
+    "developer": "Nakheel",
+    "handover": "Ask Manager"
+  },
+  {
+    "img": "",
+    "planProgress": "50/50 PAYMENT PLAN",
+    "apartmentType": "APARTMENT, PENTHOUSES",
+    "price": 39000000,
+    "location": "Regent Residences Dubai. Sankari Place",
+    "landmark": "Business Bay",
+    "developer": "Sankari Properties",
+    "handover": "Q4 2027"
+  },
+  {
+    "img": "",
+    "planProgress": "60/40 PAYMENT PLAN",
+    "apartmentType": "STUDIO, APARTMENTS",
+    "price": 650000,
+    "location": "South Garden",
+    "landmark": "Wasl Gate",
+    "developer": "Wasl",
+    "handover": "Ask Manager"
+  },
+  {
+    "img": "",
+    "planProgress": "50/50 PAYMENT PLAN",
+    "apartmentType": "APARTMENT",
+    "price": 20000000,
+    "location": "The Alba",
+    "landmark": "Palm Jumeirah",
+    "developer": "OMNIYAT",
+    "handover": "Ask Manager"
+  },
+  {
+    "img": "",
+    "planProgress": "",
+    "apartmentType": "APARTMENT",
+    "price": 1700000,
+    "location": "Skyscape Aura",
+    "landmark": "Sobha Hartland II",
+    "developer": "Sobha",
+    "handover": "Ask Manager"
+  },
+  {
+    "img": "",
+    "planProgress": "65/35 PAYMENT PLAN",
+    "apartmentType": "APARTMENTS",
+    "price": 2200000,
+    "location": "W Residences Dubai – Jumeirah Lakes Towers",
+    "landmark": "Jumeirah Lake Towers (JLT)",
+    "developer": "Signature Developers",
+    "handover": "Q4 2028"
+  },
+  {
+    "img": "",
+    "planProgress": "30/70 PAYMENT PLAN",
+    "apartmentType": "STUDIOS, APARTMENTS",
+    "price": 1250000,
+    "location": "Franck Muller Vanguard",
+    "landmark": "Dubai Marina",
+    "developer": "London Gate",
+    "handover": "Q3 2027"
+  },
+  {
+    "img": "",
+    "planProgress": "80/20 PAYMENT PLAN",
+    "apartmentType": "APARTMENTS",
+    "price": 1650000,
+    "location": "Vida Residences Club Point",
+    "landmark": "Dubai Hills Estate",
+    "developer": "Emaar",
+    "handover": "Q1 2029"
+  }
+]
